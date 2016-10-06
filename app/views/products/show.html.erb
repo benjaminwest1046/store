@@ -1,0 +1,19 @@
+<div class="large-3 small-12 column">
+  <%=image_tag @product.image_url%>
+</div>
+
+<div class="large-9 small-12 column">
+  <h3>
+    <%= @product.name %>
+  </h3>
+  <p class="label movie-label radius mb1">$ <%= @product.price %></p>
+
+  <p><%= @product.description %></p>
+  <%if signed_in?%>
+    <%=link_to "", class: "button", data: {target: @cart_action, addUrl: add_to_cart_path(@product), removeUrl: remove_from_cart_path(@product)} do%>
+    <i class="fi-shopping-cart"></i>
+    <span><%=@cart_action%></span> Cart
+    <%end%>
+  <%end%>
+  <%= link_to 'Back', products_path %>
+</div>

@@ -1,0 +1,33 @@
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">Store</li>
+      <li>
+        <a href="#">One</a>
+        <ul class="menu vertical">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Two</a></li>
+      <li><a href="#">Three</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+  <%if signed_in?%>
+    <li><%=link_to current_user.email, edit_user_registration_path%></li>
+    <li><%=link_to "Logout", destroy_user_session_path, method: :delete%></li>
+    <li>
+      <%= link_to cart_path do%>
+      <i class="fi-shopping-cart"></i> My Cart
+      (<span class="cart-count"><%=current_user.cart_count%></span>)
+      <%end%>
+    </li>
+  <%else%>
+    <li><%=link_to "Register", new_user_registration_path%></li>
+    <li><%=link_to "Login", new_user_session_path%></li>
+  <%end%>
+  </div>
+</div>
