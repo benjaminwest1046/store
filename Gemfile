@@ -26,6 +26,9 @@ gem 'foundation-rails'
 gem 'devise'
 gem 'redis'
 gem 'hiredis'
+gem 'braintree', '~> 2.33.1'
+gem 'figaro'
+gem 'gon'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

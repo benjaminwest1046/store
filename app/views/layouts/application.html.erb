@@ -6,8 +6,9 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= include_gon %>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -28,6 +29,7 @@
     </footer>
 
     <%= javascript_include_tag "application" %>
+    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
 
   </body>
 </html>
