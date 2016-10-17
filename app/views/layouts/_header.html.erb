@@ -7,6 +7,7 @@
   <div class="top-bar-right">
     <ul class="menu">
   <%if signed_in?%>
+      <li> Something </li>
     <li><%=link_to current_user.email, edit_user_registration_path%></li>
     <li><%=link_to "Logout", destroy_user_session_path, method: :delete%></li>
     <li>

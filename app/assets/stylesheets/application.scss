@@ -16,3 +16,30 @@
  *= require foundation_and_overrides
 
  */
+* {
+  font-family:  'Pacifico', Helvetica, sans-serif;
+}
+
+h6, span, p, button, div, label, input {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: black;
+}
+
+.top-bar, .top-bar ul {
+  background-color: white;
+}
+
+.primary-bg {
+  background-color: white;
+  border: 1px black solid;
+}
+
+.alert-box {
+  background-color: #27ae60;
+  opacity: .7;
+  border-radius: 10px;
+  padding:10px;
+}
